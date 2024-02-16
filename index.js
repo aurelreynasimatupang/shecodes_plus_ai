@@ -3,9 +3,14 @@ let apiUrl = '';
 let context = '';
 let promptText = '';
 
-const getAI = (event) => {
+const generatePoem = (event) => {
     event.preventDefault();
-    console.log(event.target[0]);
+    
+
+    new Typewriter('#poem', {
+        strings: 'Include poem',
+        autoStart: true,
+    })
     // console.log('Processing');
     // context = 'be polite and provide a very short answer';
     // promptText = 'Who the first sfemale president was';
@@ -14,11 +19,4 @@ const getAI = (event) => {
 }
 
 const formComponenet = document.querySelector("form");
-formComponenet.addEventListener("submit", getAI);
-
-const showPoem = () => {
-    new Typewriter("#poem", {
-        strings: [response.data.answer],
-        autoStart: true,
-      });
-}
+formComponenet.addEventListener("submit", generatePoem);
