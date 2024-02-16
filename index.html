@@ -20,15 +20,14 @@
         color: white;
     }
     .poem-app {
-        text-align: center;
         margin-top: 100px;
         padding: 50px;
         border-radius: 20px;
         height: 100% !important;
         width: 600px;
     }
-    form {
-        margin-top: 30px;
+    h1, h3 {
+        text-align: center;
     }
     input {
         display: block;
@@ -45,6 +44,7 @@
     .txtbox-poem {
         border-radius: 50px;
         padding: 15px;
+        margin-top: 0;
     }
     .btn-submit{
         background-color: #FF2869;
@@ -56,6 +56,7 @@
         background-color: #da235a;
     }
     .poem {
+        text-align: center;
         margin-top: 50px;
         margin-bottom: 50px;
         color: #540437;
@@ -80,12 +81,20 @@
     a:hover {
         text-decoration: underline;
     }
+    .subtext {
+        font-size: 14px;
+        text-align: left !important;
+    }
 </style>
 <body>
     <div class="poem-app">
         <div class="">
             <h1>Poem Generator</h1>
             <h3>By Aurelia</h3>
+            <p>
+                As the AI to write a poem for your special someone ❤️
+            </p>
+            <span class="subtext">e.g. Roses, Flower, Sweet...</span>
             <form>
                 <input type="text" 
                     placeholder="Enter the topic of the poem"

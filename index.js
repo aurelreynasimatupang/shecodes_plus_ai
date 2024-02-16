@@ -15,13 +15,13 @@ const displayPoem = (res) => {
 
 const generatePoem = (event) => {
     event.preventDefault();
-    const userInput = document.querySelector("#userPrompt");
+    const userInput = document.querySelector("#user-prompt");
     const poemText = document.querySelector('#poem');
-    poemText.innerHTML = 'Loading poem...';
+    poemText.innerHTML = `Writing a porm on '${userInput.value}'`;
 
     console.log('Processing');
-    context = 'You are a romantitc poem expert writing a poem to sweep your lover off their feet';
-    promptText = 'Write a valentines day poem';
+    context = 'You are a romantic poem expert that specialize in short poems, proses and rhymes';
+    promptText = userInput.value;
     apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
     
     axios.get(apiUrl).then(displayPoem);
